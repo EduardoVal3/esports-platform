@@ -2,26 +2,17 @@
 
 import * as React from "react"
 import {
-  IconCamera,
-  IconChartBar,
-  IconDashboard,
-  IconDatabase,
-  IconFileAi,
-  IconFileDescription,
-  IconFileWord,
-  IconFolder,
-  IconHelp,
-  IconInnerShadowTop,
-  IconListDetails,
-  IconReport,
-  IconSearch,
-  IconSettings,
-  IconUsers,
+  IconUser,
+  IconShare,
+  IconDeviceGamepad2,
+  IconAdjustments,
+  IconMail,
+  IconShieldLock,
+  IconCash,
+  IconUserCircle,
 } from "@tabler/icons-react"
 
-import { NavDocuments } from "@/components/usuario/nav-documents"
 import { NavMain } from "@/components/usuario/nav-main"
-import { NavSecondary } from "@/components/usuario/nav-secondary"
 import { NavUser } from "@/components/usuario/nav-user"
 import {
   Sidebar,
@@ -35,117 +26,45 @@ import {
 
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    name: "Jugador1",
+    email: "jugador1@example.com",
+    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=jugador1",
   },
   navMain: [
     {
-      title: "Dashboard",
-      url: "#",
-      icon: IconDashboard,
+      title: "Personal",
+      url: "/usuario/configuracion/personal",
+      icon: IconUser,
     },
     {
-      title: "Lifecycle",
-      url: "#",
-      icon: IconListDetails,
+      title: "Redes Sociales",
+      url: "/usuario/configuracion/social",
+      icon: IconShare,
     },
     {
-      title: "Analytics",
-      url: "#",
-      icon: IconChartBar,
+      title: "Cuentas de Juegos",
+      url: "/usuario/configuracion/juegos",
+      icon: IconDeviceGamepad2,
     },
     {
-      title: "Projects",
-      url: "#",
-      icon: IconFolder,
+      title: "Preferencias",
+      url: "/usuario/configuracion/preferencias",
+      icon: IconAdjustments,
     },
     {
-      title: "Team",
-      url: "#",
-      icon: IconUsers,
-    },
-  ],
-  navClouds: [
-    {
-      title: "Capture",
-      icon: IconCamera,
-      isActive: true,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
+      title: "Cuenta",
+      url: "/usuario/configuracion/cuenta",
+      icon: IconMail,
     },
     {
-      title: "Proposal",
-      icon: IconFileDescription,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
+      title: "Seguridad",
+      url: "/usuario/configuracion/seguridad",
+      icon: IconShieldLock,
     },
     {
-      title: "Prompts",
-      icon: IconFileAi,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-  ],
-  navSecondary: [
-    {
-      title: "Settings",
-      url: "#",
-      icon: IconSettings,
-    },
-    {
-      title: "Get Help",
-      url: "#",
-      icon: IconHelp,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: IconSearch,
-    },
-  ],
-  documents: [
-    {
-      name: "Data Library",
-      url: "#",
-      icon: IconDatabase,
-    },
-    {
-      name: "Reports",
-      url: "#",
-      icon: IconReport,
-    },
-    {
-      name: "Word Assistant",
-      url: "#",
-      icon: IconFileWord,
+      title: "Retiro",
+      url: "/usuario/configuracion/retiro",
+      icon: IconCash,
     },
   ],
 }
@@ -156,22 +75,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton
-              asChild
-              className="data-[slot=sidebar-menu-button]:!p-1.5"
-            >
-              <a href="#">
-                <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
-              </a>
+            <SidebarMenuButton className="data-[slot=sidebar-menu-button]:p-1.5!">
+              <IconUserCircle className="size-5!" />
+              <span className="text-base font-semibold">Mi Configuración</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />

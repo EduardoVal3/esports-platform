@@ -41,6 +41,38 @@ genero?: CatalogoGenero;
 timezone?: string;
 
 
+@Column({ name: 'correo_paypal', nullable: true })
+correoPaypal?: string;
+
+
+@Column({ name: 'telefono', nullable: true })
+telefono?: string;
+
+
+@Column({ name: 'direccion', nullable: true })
+direccion?: string;
+
+
+@Column({ name: 'ciudad', nullable: true })
+ciudad?: string;
+
+
+@Column({ name: 'estado', nullable: true })
+estado?: string;
+
+
+@Column({ name: 'codigo_postal', nullable: true })
+codigoPostal?: string;
+
+
+@Column({ name: 'pais', nullable: true })
+pais?: string;
+
+
+@Column({ name: 'divisa', nullable: true, default: 'USD' })
+divisa?: string;
+
+
 @CreateDateColumn({ name: 'creado_en' })
 creadoEn: Date;
 

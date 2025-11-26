@@ -17,7 +17,7 @@ Además, cada torneo debe tener un tipo de torneo asignado, este tipo de torneo 
 •	Créditos: 1 crédito = $1.00, 3 = $2.25, 5 = $3.75, 7 = $5.00, 10 = $7.50, 15 = $10.00 
 •	Afiliación: 
 o	Cuenta gratuita por defecto $0 Dólar estadounidense “gratis” (Acceso a competiciones gratuitas, Desafía a otros jugadores a apostar partidos, Desafía a otros jugadores a partidas de XP, Benefíciese de premios con pago instantáneo). 
-o	Paquete de Membresía, Tipo/s: Membresía de 1 mes ($5.99), Membresía de 3 meses ($12.99 – Ahorra un 28%), Membresía de 6 meses ($24.99 – Ahorra un 30%), Membresía de 12 meses ($49.99 – Ahorra un 30%), (Todo, desde la membresía gratuita y Apuestas sin comisiones, Entrada gratuita a los torneos ELITE, Avatares personalizados, Personalización de la página del equipo, Personalización de la página de perfil).
+o	Paquete de Membresía Premium, Tipo/s: Membresía de 1 mes ($5.99), Membresía de 3 meses ($12.99 – Ahorra un 28%), Membresía de 6 meses ($24.99 – Ahorra un 30%), Membresía de 12 meses ($49.99 – Ahorra un 30%), (Todo, desde la membresía gratuita y Apuestas sin comisiones, Entrada gratuita a los torneos ELITE, Avatares premium, Personalización de la página del equipo, Personalización de la página de perfil).
 •	Otro: 
 o	Cambio de nickname ($3.99).
 o	Récord de juego reiniciado ($5.99).

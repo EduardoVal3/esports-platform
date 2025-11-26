@@ -1,12 +1,17 @@
 "use client"
 
+import { useRouter } from "next/navigation"
 import {
-  IconCreditCard,
+  IconCoin,
   IconDotsVertical,
   IconLogout,
-  IconNotification,
+  IconSettings,
+  IconTrophy,
   IconUserCircle,
+  IconUsers,
+  IconWallet,
 } from "@tabler/icons-react"
+import Link from "next/link"
 
 import {
   Avatar,
@@ -28,6 +33,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
+import { useAuth } from "@/contexts/auth-context"
 
 export function NavUser({
   user,
@@ -36,9 +42,18 @@ export function NavUser({
     name: string
     email: string
     avatar: string
+    saldo?: number
+    creditos?: number
   }
 }) {
   const { isMobile } = useSidebar()
+  const { logout } = useAuth()
+  const router = useRouter()
+
+  const handleLogout = () => {
+    logout()
+    router.push("/")
+  }
 
   return (
     <SidebarMenu>
@@ -49,15 +64,22 @@ export function NavUser({
               size="lg"
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
-              <Avatar className="h-8 w-8 rounded-lg grayscale">
+              <Avatar className="h-8 w-8 rounded-lg">
                 <AvatarImage src={user.avatar} alt={user.name} />
-                <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                <AvatarFallback className="rounded-lg">
+                  {user.name.slice(0, 2).toUpperCase()}
+                </AvatarFallback>
               </Avatar>
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-medium">{user.name}</span>
-                <span className="text-muted-foreground truncate text-xs">
-                  {user.email}
-                </span>
+                <div className="flex items-center gap-2 text-xs">
+                  {user.saldo !== undefined && (
+                    <span className="text-chart-1">${user.saldo.toFixed(2)}</span>
+                  )}
+                  {user.creditos !== undefined && (
+                    <span className="text-muted-foreground">{user.creditos} créditos</span>
+                  )}
+                </div>
               </div>
               <IconDotsVertical className="ml-auto size-4" />
             </SidebarMenuButton>
@@ -72,7 +94,9 @@ export function NavUser({
               <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                 <Avatar className="h-8 w-8 rounded-lg">
                   <AvatarImage src={user.avatar} alt={user.name} />
-                  <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                  <AvatarFallback className="rounded-lg">
+                    {user.name.slice(0, 2).toUpperCase()}
+                  </AvatarFallback>
                 </Avatar>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-medium">{user.name}</span>
@@ -83,24 +107,61 @@ export function NavUser({
               </div>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
+            
+            {/* Saldo y créditos */}
+            <div className="px-2 py-1.5">
+              <div className="flex items-center justify-between text-sm">
+                <span className="flex items-center gap-1.5 text-muted-foreground">
+                  <IconWallet className="size-4" />
+                  Saldo
+                </span>
+                <span className="font-medium text-chart-1">
+                  ${user.saldo?.toFixed(2) || "0.00"}
+                </span>
+              </div>
+              <div className="mt-1 flex items-center justify-between text-sm">
+                <span className="flex items-center gap-1.5 text-muted-foreground">
+                  <IconCoin className="size-4" />
+                  Créditos
+                </span>
+                <span className="font-medium">{user.creditos || 0}</span>
+              </div>
+            </div>
+            
+            <DropdownMenuSeparator />
             <DropdownMenuGroup>
-              <DropdownMenuItem>
-                <IconUserCircle />
-                Account
+              <DropdownMenuItem asChild>
+                <Link href={`/usuario/perfil/${user.name}`}>
+                  <IconUserCircle />
+                  Mi Perfil
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <IconCreditCard />
-                Billing
+              <DropdownMenuItem asChild>
+                <Link href="/usuario/torneos">
+                  <IconTrophy />
+                  Mis Torneos
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <IconNotification />
-                Notifications
+              <DropdownMenuItem asChild>
+                <Link href="/usuario/equipo">
+                  <IconUsers />
+                  Mi Equipo
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/usuario/configuracion">
+                  <IconSettings />
+                  Configuración
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem 
+              className="text-destructive focus:text-destructive cursor-pointer"
+              onClick={handleLogout}
+            >
               <IconLogout />
-              Log out
+              Cerrar Sesión
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

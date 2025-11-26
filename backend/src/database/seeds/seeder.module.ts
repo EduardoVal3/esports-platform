@@ -12,6 +12,9 @@ import { CatalogoRegion } from '../../modules/catalogo-region/entities/catalogo-
 import { CatalogoTipoEntrada } from '../../modules/catalogo-tipo-entrada/entities/catalogo-tipo-entrada.entity';
 import { CatalogoTipoItem } from '../../modules/catalogo-tipo-item/entities/catalogo-tipo-item.entity';
 import { CatalogoTransaccionTipo } from '../../modules/catalogo-transaccion-tipo/entities/catalogo-transaccion-tipo.entity';
+import { CatalogoAvatar } from '../../modules/catalogo-avatar/entities/catalogo-avatar.entity';
+import { MembresiaTipo } from '../../modules/membresia-tipo/entities/membresia-tipo.entity';
+import { TiendaItem } from '../../modules/tienda-item/entities/tienda-item.entity';
 import { Persona } from '../../modules/persona/entities/persona.entity';
 import { Usuario } from '../../modules/usuario/entities/usuario.entity';
 import { SeederService } from './seeder.service';
@@ -47,6 +50,9 @@ import { SeederService } from './seeder.service';
       CatalogoTipoEntrada,
       CatalogoTipoItem,
       CatalogoTransaccionTipo,
+      CatalogoAvatar,
+      MembresiaTipo,
+      TiendaItem,
       Persona,
       Usuario,
     ]),

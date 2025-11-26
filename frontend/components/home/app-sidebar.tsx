@@ -2,27 +2,22 @@
 
 import * as React from "react"
 import {
-  IconCamera,
-  IconChartBar,
-  IconDashboard,
-  IconDatabase,
-  IconFileAi,
-  IconFileDescription,
-  IconFileWord,
-  IconFolder,
+  IconDeviceGamepad2,
   IconHelp,
-  IconInnerShadowTop,
-  IconListDetails,
-  IconReport,
+  IconHome,
   IconSearch,
   IconSettings,
+  IconShoppingCart,
+  IconTrophy,
   IconUsers,
+  IconUsersGroup,
+  IconCoin,
 } from "@tabler/icons-react"
 
-import { NavDocuments } from "@/components/home/nav-documents"
 import { NavMain } from "@/components/home/nav-main"
 import { NavSecondary } from "@/components/home/nav-secondary"
 import { NavUser } from "@/components/home/nav-user"
+import { NavQuickLinks } from "@/components/home/nav-quick-links"
 import {
   Sidebar,
   SidebarContent,
@@ -32,125 +27,88 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import Link from "next/link"
+import { useAuth } from "@/contexts/auth-context"
 
 const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
+  // Navegación principal
   navMain: [
     {
-      title: "Dashboard",
-      url: "#",
-      icon: IconDashboard,
+      title: "Inicio",
+      url: "/",
+      icon: IconHome,
     },
     {
-      title: "Lifecycle",
-      url: "#",
-      icon: IconListDetails,
+      title: "Torneos",
+      url: "/torneos",
+      icon: IconTrophy,
     },
     {
-      title: "Analytics",
-      url: "#",
-      icon: IconChartBar,
+      title: "Equipos",
+      url: "/equipos",
+      icon: IconUsersGroup,
     },
     {
-      title: "Projects",
-      url: "#",
-      icon: IconFolder,
+      title: "Tienda",
+      url: "/tienda",
+      icon: IconShoppingCart,
+    },
+  ],
+  // Enlaces rápidos para usuarios
+  quickLinks: [
+    {
+      name: "Mis Torneos",
+      url: "/usuario/torneos",
+      icon: IconTrophy,
     },
     {
-      title: "Team",
-      url: "#",
+      name: "Mi Equipo",
+      url: "/usuario/equipo",
       icon: IconUsers,
     },
-  ],
-  navClouds: [
     {
-      title: "Capture",
-      icon: IconCamera,
-      isActive: true,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
+      name: "Mis Créditos",
+      url: "/tienda/creditos",
+      icon: IconCoin,
     },
     {
-      title: "Proposal",
-      icon: IconFileDescription,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Prompts",
-      icon: IconFileAi,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
+      name: "Juegos",
+      url: "/juegos",
+      icon: IconDeviceGamepad2,
     },
   ],
+  // Navegación secundaria
   navSecondary: [
     {
-      title: "Settings",
-      url: "#",
+      title: "Configuración",
+      url: "/usuario/configuracion",
       icon: IconSettings,
     },
     {
-      title: "Get Help",
-      url: "#",
+      title: "Ayuda",
+      url: "/ayuda",
       icon: IconHelp,
     },
     {
-      title: "Search",
-      url: "#",
+      title: "Buscar",
+      url: "/buscar",
       icon: IconSearch,
-    },
-  ],
-  documents: [
-    {
-      name: "Data Library",
-      url: "#",
-      icon: IconDatabase,
-    },
-    {
-      name: "Reports",
-      url: "#",
-      icon: IconReport,
-    },
-    {
-      name: "Word Assistant",
-      url: "#",
-      icon: IconFileWord,
     },
   ],
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { usuario, isAuthenticated, isLoading } = useAuth();
+
+  // Preparar datos del usuario para el NavUser
+  const userForNav = usuario ? {
+    name: usuario.nickname,
+    email: usuario.persona.correo,
+    avatar: usuario.avatar || "/avatars/default.jpg",
+    saldo: usuario.saldo || 0,
+    creditos: usuario.creditos || 0,
+  } : null;
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
@@ -160,21 +118,34 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
-              <a href="#">
-                <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
-              </a>
+              <Link href="/">
+                <IconTrophy className="!size-5 text-chart-1" />
+                <span className="text-base font-semibold">eSports Platform</span>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
+        {isAuthenticated && <NavQuickLinks items={data.quickLinks} />}
+        {isAuthenticated && <NavSecondary items={data.navSecondary} className="mt-auto" />}
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        {isLoading ? (
+          <div className="p-4 text-center text-sm text-muted-foreground">
+            Cargando...
+          </div>
+        ) : isAuthenticated && userForNav ? (
+          <NavUser user={userForNav} />
+        ) : (
+          <div className="p-4 text-center text-sm text-muted-foreground">
+            <p>¿No tienes cuenta?</p>
+            <Link href="/auth/registro" className="text-primary hover:underline">
+              Regístrate gratis
+            </Link>
+          </div>
+        )}
       </SidebarFooter>
     </Sidebar>
   )

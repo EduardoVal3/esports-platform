@@ -13,6 +13,9 @@ import { CatalogoRegion } from '../../modules/catalogo-region/entities/catalogo-
 import { CatalogoTipoEntrada } from '../../modules/catalogo-tipo-entrada/entities/catalogo-tipo-entrada.entity';
 import { CatalogoTipoItem } from '../../modules/catalogo-tipo-item/entities/catalogo-tipo-item.entity';
 import { CatalogoTransaccionTipo } from '../../modules/catalogo-transaccion-tipo/entities/catalogo-transaccion-tipo.entity';
+import { CatalogoAvatar } from '../../modules/catalogo-avatar/entities/catalogo-avatar.entity';
+import { MembresiaTipo } from '../../modules/membresia-tipo/entities/membresia-tipo.entity';
+import { TiendaItem } from '../../modules/tienda-item/entities/tienda-item.entity';
 import { Persona } from '../../modules/persona/entities/persona.entity';
 import { Usuario } from '../../modules/usuario/entities/usuario.entity';
 
@@ -41,6 +44,12 @@ export class SeederService {
     private readonly tipoItemRepository: Repository<CatalogoTipoItem>,
     @InjectRepository(CatalogoTransaccionTipo)
     private readonly transaccionTipoRepository: Repository<CatalogoTransaccionTipo>,
+    @InjectRepository(CatalogoAvatar)
+    private readonly avatarRepository: Repository<CatalogoAvatar>,
+    @InjectRepository(MembresiaTipo)
+    private readonly membresiaTipoRepository: Repository<MembresiaTipo>,
+    @InjectRepository(TiendaItem)
+    private readonly tiendaItemRepository: Repository<TiendaItem>,
     @InjectRepository(Persona)
     private readonly personaRepository: Repository<Persona>,
     @InjectRepository(Usuario)
@@ -76,6 +85,9 @@ export class SeederService {
     await this.seedTiposEntrada();
     await this.seedTiposItem();
     await this.seedTiposTransaccion();
+    await this.seedAvatares();
+    await this.seedMembresias();
+    await this.seedTiendaItems();
     await this.seedAdminUser();
 
     console.log('✅ Seeds completados exitosamente!');
@@ -130,7 +142,7 @@ export class SeederService {
   }
 
   private async seedEstadosTorneo() {
-    const estados = ['borrador', 'abierto', 'en_curso', 'finalizado', 'cancelado'];
+    const estados = ['borrador', 'abierto', 'en curso', 'finalizado', 'cancelado'];
     
     for (const valor of estados) {
       const exists = await this.estadoTorneoRepository.findOne({ where: { valor } });
@@ -199,7 +211,7 @@ export class SeederService {
   }
 
   private async seedTiposEntrada() {
-    const tipos = ['gratis', 'pago', 'invitacion'];
+    const tipos = ['mando', 'teclado', 'todos'];
     
     for (const valor of tipos) {
       const exists = await this.tipoEntradaRepository.findOne({ where: { valor } });
@@ -211,7 +223,7 @@ export class SeederService {
   }
 
   private async seedTiposItem() {
-    const tipos = ['skin', 'avatar', 'banner', 'insignia', 'marco', 'emote', 'boost'];
+    const tipos = ['creditos', 'membresia', 'servicio'];
     
     for (const valor of tipos) {
       const exists = await this.tipoItemRepository.findOne({ where: { valor } });
@@ -223,7 +235,7 @@ export class SeederService {
   }
 
   private async seedTiposTransaccion() {
-    const tipos = ['credito', 'debito'];
+    const tipos = ['saldo', 'creditos'];
     
     for (const valor of tipos) {
       const exists = await this.transaccionTipoRepository.findOne({ where: { valor } });
@@ -231,6 +243,239 @@ export class SeederService {
         await this.transaccionTipoRepository.save({ valor });
         console.log(`  ✓ Tipo de transacción creado: ${valor}`);
       }
+    }
+  }
+
+  private async seedAvatares() {
+    // Seeds para avatares bottts
+    const botttSeeds = [
+      'Felix', 'Aneka', 'Buster', 'Midnight', 'Precious', 'Shadow', 
+      'Lucky', 'Misty', 'Buddy', 'Charlie', 'Max', 'Luna', 'Rocky',
+      'Daisy', 'Bailey', 'Coco', 'Milo', 'Bella', 'Oliver', 'Zoe',
+      'Leo', 'Lily', 'Cooper', 'Lucy', 'Bear', 'Molly', 'Duke', 'Sophie',
+      'Zeus', 'Sadie', 'Jack', 'Maggie', 'Toby', 'Stella', 'Teddy',
+      'Penny', 'Winston', 'Chloe', 'Tucker', 'Lola', 'Jake', 'Nala',
+      'Bentley', 'Gracie', 'Oscar', 'Ruby', 'Gizmo', 'Rosie', 'Thor',
+      'Ellie', 'Bandit', 'Zoey', 'Finn', 'Ginger', 'Harley', 'Princess',
+      'Murphy', 'Piper', 'Riley', 'Willow', 'Hank', 'Emma', 'Louie',
+      'Abby', 'Bruno', 'Angel', 'Diesel', 'Annie', 'Ace', 'Roxy'
+    ];
+
+    let createdCount = 0;
+    let existingCount = 0;
+
+    for (let index = 0; index < botttSeeds.length; index++) {
+      const seed = botttSeeds[index];
+      const nombre = `bottts-${seed.toLowerCase()}`;
+      
+      const exists = await this.avatarRepository.findOne({ where: { nombre } });
+      
+      if (!exists) {
+        await this.avatarRepository.save({
+          nombre,
+          url: `https://api.dicebear.com/9.x/bottts/svg?seed=${seed}`,
+          seed,
+          categoria: 'bottts',
+          disponible: true,
+          premium: index >= 50, // Los primeros 50 son gratuitos, el resto premium
+        });
+        createdCount++;
+      } else {
+        existingCount++;
+      }
+    }
+
+    if (createdCount > 0) {
+      console.log(`  ✓ Avatares creados: ${createdCount} (${botttSeeds.length - createdCount} ya existían)`);
+    } else {
+      console.log(`  ⚠ Todos los avatares ya existían (${existingCount})`);
+    }
+  }
+
+  private async seedMembresias() {
+    const membresias = [
+      {
+        nombre: 'Gratuita',
+        precio: '0.00',
+        duracionDias: 0,
+        beneficios: 'Acceso a competiciones gratuitas, Desafía a otros jugadores a apostar partidos, Desafía a otros jugadores a partidas de XP, Benefíciese de premios con pago instantáneo'
+      },
+      {
+        nombre: 'Premium 1 Mes',
+        precio: '5.99',
+        duracionDias: 30,
+        beneficios: 'Todo lo de la membresía gratuita + Apuestas sin comisiones, Entrada gratuita a los torneos ELITE, Avatares premium, Personalización de la página del equipo, Personalización de la página de perfil'
+      },
+      {
+        nombre: 'Premium 3 Meses',
+        precio: '12.99',
+        duracionDias: 90,
+        beneficios: 'Todo lo de Premium + Ahorra un 28%'
+      },
+      {
+        nombre: 'Premium 6 Meses',
+        precio: '24.99',
+        duracionDias: 180,
+        beneficios: 'Todo lo de Premium + Ahorra un 30%'
+      },
+      {
+        nombre: 'Premium 12 Meses',
+        precio: '49.99',
+        duracionDias: 365,
+        beneficios: 'Todo lo de Premium + Ahorra un 30%'
+      }
+    ];
+
+    let createdCount = 0;
+
+    for (const membresia of membresias) {
+      const exists = await this.membresiaTipoRepository.findOne({ 
+        where: { nombre: membresia.nombre } 
+      });
+
+      if (!exists) {
+        await this.membresiaTipoRepository.save(membresia);
+        createdCount++;
+      }
+    }
+
+    if (createdCount > 0) {
+      console.log(`  ✓ Tipos de membresía creados: ${createdCount} (${membresias.length - createdCount} ya existían)`);
+    } else {
+      console.log(`  ⚠ Todos los tipos de membresía ya existían`);
+    }
+  }
+
+  private async seedTiendaItems() {
+    // Obtener tipos de item
+    const tipoCreditosEntity = await this.tipoItemRepository.findOne({ where: { valor: 'creditos' } });
+    const tipoMembresiaEntity = await this.tipoItemRepository.findOne({ where: { valor: 'membresia' } });
+    const tipoServicioEntity = await this.tipoItemRepository.findOne({ where: { valor: 'servicio' } });
+    const membresiasEntity = await this.membresiaTipoRepository.find();
+
+    if (!tipoCreditosEntity || !tipoMembresiaEntity || !tipoServicioEntity) {
+      console.log('  ⚠ No se encontraron los tipos de item necesarios');
+      return;
+    }
+
+    const items: Array<{
+      tipo: CatalogoTipoItem;
+      nombre: string;
+      descripcion: string;
+      precio: string;
+      creditosOtorgados: number | null;
+      metadata: any;
+    }> = [
+      // Paquetes de créditos
+      {
+        tipo: tipoCreditosEntity,
+        nombre: '1 Crédito',
+        descripcion: 'Paquete básico de créditos',
+        precio: '1.00',
+        creditosOtorgados: 1,
+        metadata: { destacado: false }
+      },
+      {
+        tipo: tipoCreditosEntity,
+        nombre: '3 Créditos',
+        descripcion: 'Paquete de 3 créditos',
+        precio: '2.25',
+        creditosOtorgados: 3,
+        metadata: { destacado: false }
+      },
+      {
+        tipo: tipoCreditosEntity,
+        nombre: '5 Créditos',
+        descripcion: 'Paquete de 5 créditos',
+        precio: '3.75',
+        creditosOtorgados: 5,
+        metadata: { destacado: false }
+      },
+      {
+        tipo: tipoCreditosEntity,
+        nombre: '7 Créditos',
+        descripcion: 'Paquete de 7 créditos',
+        precio: '5.00',
+        creditosOtorgados: 7,
+        metadata: { destacado: true }
+      },
+      {
+        tipo: tipoCreditosEntity,
+        nombre: '10 Créditos',
+        descripcion: 'Paquete de 10 créditos',
+        precio: '7.50',
+        creditosOtorgados: 10,
+        metadata: { destacado: false }
+      },
+      {
+        tipo: tipoCreditosEntity,
+        nombre: '15 Créditos',
+        descripcion: 'Paquete de 15 créditos - Mejor valor',
+        precio: '10.00',
+        creditosOtorgados: 15,
+        metadata: { destacado: true, mejorValor: true }
+      },
+      // Servicios
+      {
+        tipo: tipoServicioEntity,
+        nombre: 'Cambio de Nickname',
+        descripcion: 'Cambia tu nombre de usuario único',
+        precio: '3.99',
+        creditosOtorgados: null,
+        metadata: { servicioTipo: 'cambio_nickname' }
+      },
+      {
+        tipo: tipoServicioEntity,
+        nombre: 'Reiniciar Récord de Juego',
+        descripcion: 'Reinicia tu historial completo de partidas',
+        precio: '5.99',
+        creditosOtorgados: null,
+        metadata: { servicioTipo: 'reset_record', advertencia: 'Acción irreversible' }
+      },
+      {
+        tipo: tipoServicioEntity,
+        nombre: 'Reiniciar Estadísticas',
+        descripcion: 'Reinicia tus estadísticas de juego',
+        precio: '3.99',
+        creditosOtorgados: null,
+        metadata: { servicioTipo: 'reset_stats', advertencia: 'Acción irreversible' }
+      }
+    ];
+
+    // Agregar membresías a items de tienda
+    for (const membresia of membresiasEntity) {
+      if (membresia.nombre !== 'Gratuita') {
+        items.push({
+          tipo: tipoMembresiaEntity,
+          nombre: membresia.nombre,
+          descripcion: membresia.beneficios,
+          precio: membresia.precio,
+          creditosOtorgados: null,
+          metadata: { 
+            membresiaTipoId: membresia.id,
+            duracionDias: membresia.duracionDias
+          }
+        });
+      }
+    }
+
+    let createdCount = 0;
+
+    for (const item of items) {
+      const exists = await this.tiendaItemRepository.findOne({ 
+        where: { nombre: item.nombre } 
+      });
+
+      if (!exists) {
+        await this.tiendaItemRepository.save(item);
+        createdCount++;
+      }
+    }
+
+    if (createdCount > 0) {
+      console.log(`  ✓ Items de tienda creados: ${createdCount} (${items.length - createdCount} ya existían)`);
+    } else {
+      console.log(`  ⚠ Todos los items de tienda ya existían`);
     }
   }
 

@@ -9,6 +9,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { CatalogoEstadoAmistadModule } from './modules/catalogo-estado-amistad/catalogo-estado-amistad.module';
 import { CatalogoEstadoInscripcionModule } from './modules/catalogo-estado-inscripcion/catalogo-estado-inscripcion.module';
 import { CatalogoEstadoTorneoModule } from './modules/catalogo-estado-torneo/catalogo-estado-torneo.module';
+import { CatalogoAvatarModule } from './modules/catalogo-avatar/catalogo-avatar.module';
 import { CatalogoGeneroModule } from './modules/catalogo-genero/catalogo-genero.module';
 import { CatalogoOrigenTransaccionModule } from './modules/catalogo-origen-transaccion/catalogo-origen-transaccion.module';
 import { CatalogoPlataformaModule } from './modules/catalogo-plataforma/catalogo-plataforma.module';
@@ -63,6 +64,7 @@ import { SeederModule } from './database/seeds/seeder.module';
       inject: [ConfigService],
     }),
     AuthModule,
+    CatalogoAvatarModule,
     CatalogoEstadoAmistadModule,
     CatalogoEstadoInscripcionModule,
     CatalogoEstadoTorneoModule,

@@ -1,3 +1,4 @@
+import { CatalogoAvatar } from "src/modules/catalogo-avatar/entities/catalogo-avatar.entity";
 import { CatalogoRol } from "src/modules/catalogo-rol/entities/catalogo-rol.entity";
 import { Persona } from "src/modules/persona/entities/persona.entity";
 import { Transaccion } from "src/modules/transaccion/entities/transaccion.entity";
@@ -58,16 +59,17 @@ creditos: number;
 fotoPerfil?: string;
 
 
+@ManyToOne(() => CatalogoAvatar, { nullable: true })
+@JoinColumn({ name: 'avatar_id' })
+avatar?: CatalogoAvatar;
+
+
 @Column({ name: 'biografia', type: 'varchar', length: 300, nullable: true })
 biografia?: string;
 
 
 @Column({ name: 'desafios_habilitados', type: 'boolean', default: true })
 desafiosHabilitados: boolean;
-
-
-@Column({ name: 'pais', nullable: true })
-pais?: string;
 
 
 @CreateDateColumn({ name: 'creado_en' })
