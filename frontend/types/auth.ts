@@ -15,9 +15,9 @@ export interface Usuario {
   nickname: string;
   rol: 'usuario' | 'administrador';
   persona: Persona;
-  avatar?: string;
-  saldo?: number;
-  creditos?: number;
+  avatar: { id: string; url: string; nombre: string } | null;
+  saldo: string; // viene como string del backend (NUMERIC)
+  creditos: number;
   xp?: number;
   estado?: 'activo' | 'suspendido' | 'baneado';
 }

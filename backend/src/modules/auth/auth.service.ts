@@ -99,6 +99,9 @@ export class AuthService {
         id: usuario.id,
         nickname: usuario.nickname,
         rol: usuario.rol.valor,
+        avatar: null,
+        saldo: '0.00',
+        creditos: 0,
         persona: {
           nombre: usuario.persona.pNombre,
           apellido: usuario.persona.pApellido,
@@ -121,14 +124,14 @@ export class AuthService {
       if (persona) {
         usuario = await this.usuarioRepository.findOne({
           where: { persona: { id: persona.id } },
-          relations: ['persona', 'rol'],
+          relations: ['persona', 'rol', 'avatar'],
         });
       }
     } else {
       // Es un nickname
       usuario = await this.usuarioRepository.findOne({
         where: { nickname: loginDto.login },
-        relations: ['persona', 'rol'],
+        relations: ['persona', 'rol', 'avatar'],
       });
     }
 
@@ -175,6 +178,13 @@ export class AuthService {
         id: usuario.id,
         nickname: usuario.nickname,
         rol: usuario.rol.valor,
+        avatar: usuario.avatar ? {
+          id: usuario.avatar.id,
+          url: usuario.avatar.url,
+          nombre: usuario.avatar.nombre,
+        } : null,
+        saldo: usuario.saldo,
+        creditos: usuario.creditos,
         persona: {
           nombre: usuario.persona.pNombre,
           apellido: usuario.persona.pApellido,
@@ -187,7 +197,7 @@ export class AuthService {
   async validateUser(userId: string) {
     const usuario = await this.usuarioRepository.findOne({
       where: { id: userId },
-      relations: ['persona', 'rol'],
+      relations: ['persona', 'rol', 'avatar'],
     });
 
     if (!usuario) {

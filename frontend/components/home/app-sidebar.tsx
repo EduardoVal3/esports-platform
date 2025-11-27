@@ -29,6 +29,7 @@ import {
 } from "@/components/ui/sidebar"
 import Link from "next/link"
 import { useAuth } from "@/contexts/auth-context"
+import { useUsuarioActual } from "@/hooks/use-usuario-actual"
 
 const data = {
   // Navegación principal
@@ -98,15 +99,16 @@ const data = {
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-  const { usuario, isAuthenticated, isLoading } = useAuth();
+  const { isAuthenticated } = useAuth();
+  const { usuario, isLoading } = useUsuarioActual();
 
   // Preparar datos del usuario para el NavUser
   const userForNav = usuario ? {
     name: usuario.nickname,
     email: usuario.persona.correo,
-    avatar: usuario.avatar || "/avatars/default.jpg",
-    saldo: usuario.saldo || 0,
-    creditos: usuario.creditos || 0,
+    avatar: usuario.avatar?.url ?? null,
+    saldo: usuario.saldo,
+    creditos: usuario.creditos,
   } : null;
 
   return (

@@ -33,7 +33,11 @@ export class AuthController {
       id: usuario.id,
       nickname: usuario.nickname,
       rol: usuario.rol.valor,
-      avatar: usuario.avatar,
+      avatar: usuario.avatar ? {
+        id: usuario.avatar.id,
+        url: usuario.avatar.url,
+        nombre: usuario.avatar.nombre,
+      } : null,
       saldo: usuario.saldo,
       creditos: usuario.creditos,
       xp: usuario.xp,
@@ -43,7 +47,6 @@ export class AuthController {
         apellido: usuario.persona.pApellido,
         correo: usuario.persona.correo,
         fechaNacimiento: usuario.persona.fechaNacimiento,
-        genero: usuario.persona.genero,
         timezone: usuario.persona.timezone,
       },
     };

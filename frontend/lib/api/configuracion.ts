@@ -337,3 +337,60 @@ export async function actualizarSeguridad(
 export async function obtenerConfigRetiro(): Promise<ConfigRetiro> {
   return api.get<ConfigRetiro>('/usuario/configuracion/retiro');
 }
+
+// ============================================================================
+// FUNCIONES DE API - Catálogo de Avatares
+// ============================================================================
+
+/**
+ * Avatar disponible en el catálogo
+ */
+export interface CatalogoAvatar {
+  id: string;
+  nombre: string;
+  url: string;
+  seed: string;
+  categoria: string;
+  disponible: boolean;
+  premium: boolean;
+  creadoEn: string;
+}
+
+/**
+ * Información de membresía del usuario
+ */
+export interface MembresiaUsuario {
+  tiene_membresia: boolean;
+  membresia_actual: {
+    id: string;
+    tipo: string;
+    fecha_inicio: string;
+    fecha_fin: string;
+    dias_restantes: number;
+  } | null;
+}
+
+/**
+ * Obtiene el catálogo completo de avatares disponibles.
+ */
+export async function obtenerCatalogoAvatares(): Promise<CatalogoAvatar[]> {
+  return api.get<CatalogoAvatar[]>('/catalogo-avatar', { requireAuth: false });
+}
+
+/**
+ * Obtiene la información de membresía del usuario actual.
+ * Usa el catálogo de tienda para obtener esta información.
+ */
+export async function obtenerMembresiaUsuario(): Promise<MembresiaUsuario> {
+  const catalogo = await api.get<{
+    usuario?: {
+      tiene_membresia: boolean;
+      membresia_actual: MembresiaUsuario['membresia_actual'];
+    };
+  }>('/tienda/catalogo/usuario');
+  
+  return {
+    tiene_membresia: catalogo.usuario?.tiene_membresia ?? false,
+    membresia_actual: catalogo.usuario?.membresia_actual ?? null,
+  };
+}

@@ -24,6 +24,7 @@ import { SiteHeader } from "@/components/usuario/site-header";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { useConfigPersonal } from "@/hooks/use-configuracion";
+import { AvatarSelector } from "@/components/usuario/avatar-selector";
 
 // Lista de zonas horarias comunes
 const timezones = [
@@ -52,7 +53,10 @@ export default function PersonalConfigPage() {
     biografia: "",
     genero_id: "",
     timezone: "",
+    avatar_id: "",
   });
+  // Estado temporal para mostrar el avatar seleccionado antes de guardar
+  const [tempAvatarUrl, setTempAvatarUrl] = useState<string | null>(null);
   const [hasChanges, setHasChanges] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
@@ -68,7 +72,9 @@ export default function PersonalConfigPage() {
         biografia: data.biografia || "",
         genero_id: data.genero?.id || "",
         timezone: data.timezone || "",
+        avatar_id: data.avatar?.id || "",
       });
+      setTempAvatarUrl(null);
       setHasChanges(false);
     }
   }, [data]);
@@ -81,16 +87,27 @@ export default function PersonalConfigPage() {
     setHasChanges(true);
   };
 
+  const handleAvatarSelect = (avatarId: string, avatarUrl: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      avatar_id: avatarId,
+    }));
+    setTempAvatarUrl(avatarUrl);
+    setHasChanges(true);
+  };
+
   const handleSave = async () => {
     setSuccessMessage(null);
     const success = await guardar({
       biografia: formData.biografia || undefined,
       genero_id: formData.genero_id || undefined,
       timezone: formData.timezone || undefined,
+      avatar_id: formData.avatar_id || undefined,
     });
 
     if (success) {
       setSuccessMessage("Tu configuración personal ha sido actualizada.");
+      setTempAvatarUrl(null);
       setHasChanges(false);
     }
   };
@@ -101,8 +118,10 @@ export default function PersonalConfigPage() {
         biografia: data.biografia || "",
         genero_id: data.genero?.id || "",
         timezone: data.timezone || "",
+        avatar_id: data.avatar?.id || "",
       });
     }
+    setTempAvatarUrl(null);
     setHasChanges(false);
   };
 
@@ -121,8 +140,8 @@ export default function PersonalConfigPage() {
     );
   }
 
-  // Avatar URL
-  const avatarUrl = data?.avatar?.url || data?.foto_perfil || `https://api.dicebear.com/7.x/bottts/svg?seed=${data?.nickname || 'default'}`;
+  // Avatar URL - usa el temporal si existe, sino el actual
+  const avatarUrl = tempAvatarUrl || data?.avatar?.url || data?.foto_perfil || `https://api.dicebear.com/7.x/bottts/svg?seed=${data?.nickname || 'default'}`;
 
   return (
     <>
@@ -188,9 +207,21 @@ export default function PersonalConfigPage() {
                           {data?.nickname?.slice(0, 2).toUpperCase() || 'US'}
                         </AvatarFallback>
                       </Avatar>
-                      <Button variant="outline" size="sm" disabled>
-                        Cambiar avatar
-                      </Button>
+                      <AvatarSelector
+                        currentAvatarUrl={data?.avatar?.url}
+                        currentAvatarId={data?.avatar?.id}
+                        onSelect={handleAvatarSelect}
+                        disabled={saving}
+                      >
+                        <Button variant="outline" size="sm" disabled={saving}>
+                          Cambiar avatar
+                        </Button>
+                      </AvatarSelector>
+                      {tempAvatarUrl && (
+                        <p className="text-xs text-amber-500 text-center">
+                          Avatar seleccionado. Guarda los cambios para aplicarlo.
+                        </p>
+                      )}
                     </div>
 
                     {/* Nickname (no editable) */}

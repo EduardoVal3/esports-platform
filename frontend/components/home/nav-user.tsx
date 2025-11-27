@@ -41,9 +41,9 @@ export function NavUser({
   user: {
     name: string
     email: string
-    avatar: string
-    saldo?: number
-    creditos?: number
+    avatar?: string | null
+    saldo?: number | string | null
+    creditos?: number | null
   }
 }) {
   const { isMobile } = useSidebar()
@@ -55,6 +55,14 @@ export function NavUser({
     router.push("/")
   }
 
+  // Parsear saldo a número de forma segura
+  const saldoNumerico = typeof user.saldo === 'string' 
+    ? parseFloat(user.saldo) 
+    : (user.saldo ?? 0);
+  
+  // Avatar por defecto si no existe
+  const avatarUrl = user.avatar || `https://api.dicebear.com/7.x/bottts/svg?seed=${user.name}`;
+
   return (
     <SidebarMenu>
       <SidebarMenuItem>
@@ -65,7 +73,7 @@ export function NavUser({
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
               <Avatar className="h-8 w-8 rounded-lg">
-                <AvatarImage src={user.avatar} alt={user.name} />
+                <AvatarImage src={avatarUrl} alt={user.name} />
                 <AvatarFallback className="rounded-lg">
                   {user.name.slice(0, 2).toUpperCase()}
                 </AvatarFallback>
@@ -73,12 +81,8 @@ export function NavUser({
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-medium">{user.name}</span>
                 <div className="flex items-center gap-2 text-xs">
-                  {user.saldo !== undefined && (
-                    <span className="text-chart-1">${user.saldo.toFixed(2)}</span>
-                  )}
-                  {user.creditos !== undefined && (
-                    <span className="text-muted-foreground">{user.creditos} créditos</span>
-                  )}
+                  <span className="text-chart-1">${saldoNumerico.toFixed(2)}</span>
+                  <span className="text-muted-foreground">{user.creditos ?? 0} créditos</span>
                 </div>
               </div>
               <IconDotsVertical className="ml-auto size-4" />
@@ -93,7 +97,7 @@ export function NavUser({
             <DropdownMenuLabel className="p-0 font-normal">
               <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                 <Avatar className="h-8 w-8 rounded-lg">
-                  <AvatarImage src={user.avatar} alt={user.name} />
+                  <AvatarImage src={avatarUrl} alt={user.name} />
                   <AvatarFallback className="rounded-lg">
                     {user.name.slice(0, 2).toUpperCase()}
                   </AvatarFallback>
@@ -116,7 +120,7 @@ export function NavUser({
                   Saldo
                 </span>
                 <span className="font-medium text-chart-1">
-                  ${user.saldo?.toFixed(2) || "0.00"}
+                  ${saldoNumerico.toFixed(2)}
                 </span>
               </div>
               <div className="mt-1 flex items-center justify-between text-sm">
@@ -124,7 +128,7 @@ export function NavUser({
                   <IconCoin className="size-4" />
                   Créditos
                 </span>
-                <span className="font-medium">{user.creditos || 0}</span>
+                <span className="font-medium">{user.creditos ?? 0}</span>
               </div>
             </div>
             
@@ -137,7 +141,7 @@ export function NavUser({
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/usuario/torneos">
+                <Link href="/torneos/mis-torneos">
                   <IconTrophy />
                   Mis Torneos
                 </Link>
@@ -149,7 +153,7 @@ export function NavUser({
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/usuario/configuracion">
+                <Link href="/usuario/configuracion/personal">
                   <IconSettings />
                   Configuración
                 </Link>
