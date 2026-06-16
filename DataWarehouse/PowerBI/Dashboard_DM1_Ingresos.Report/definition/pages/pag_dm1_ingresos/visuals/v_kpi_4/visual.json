@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "v_kpi_4",
   "position": {
-    "height": 72,
-    "z": 6,
-    "x": 950,
-    "y": 68,
-    "width": 298,
-    "tabOrder": 6
+    "x": 950.1858736059479,
+    "y": 68.25278810408922,
+    "z": 6000,
+    "height": 72.267657992565049,
+    "width": 317.17472118959108,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "card",
@@ -188,7 +188,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Creditos Otorgados'"
+                  "Value": "'Credítos Otorgados'"
                 }
               }
             },

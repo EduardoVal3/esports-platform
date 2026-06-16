@@ -4,10 +4,10 @@
   "position": {
     "x": 330,
     "y": 68,
-    "z": 4,
+    "z": 4000,
     "height": 72,
     "width": 298,
-    "tabOrder": 4
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "card",
@@ -222,23 +222,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "98f7f6ea76746c6361d8",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact Ingresos"
-              }
-            },
-            "Property": "Meta Ingresos"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

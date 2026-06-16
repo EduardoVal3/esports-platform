@@ -140,6 +140,18 @@
                   "Value": "'''''''Segoe UI'''', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -171,6 +183,18 @@
                   "expr": {
                     "Literal": {
                       "Value": "'#1E2A3A'"
+                    }
+                  }
+                }
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
@@ -290,7 +314,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Recomendacion por Plataforma'"
+                  "Value": "'Recomendación por Plataforma'"
                 }
               }
             },

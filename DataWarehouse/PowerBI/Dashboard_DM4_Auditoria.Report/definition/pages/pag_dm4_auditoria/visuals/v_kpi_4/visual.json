@@ -4,10 +4,10 @@
   "position": {
     "x": 950.761154855643,
     "y": 67.191601049868765,
-    "z": 6,
+    "z": 6000,
     "height": 72.230971128608928,
     "width": 317.48031496062993,
-    "tabOrder": 6
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "card",
@@ -222,23 +222,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5397b51a202518dcd6da",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact Auditoria"
-              }
-            },
-            "Property": "Registros Restringidos"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

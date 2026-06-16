@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "v_row1_3",
   "position": {
-    "height": 270,
-    "z": 9,
-    "x": 844,
-    "y": 150,
-    "width": 400,
-    "tabOrder": 9
+    "x": 844.460966542751,
+    "y": 149.88847583643121,
+    "z": 9000,
+    "height": 270.33457249070631,
+    "width": 422.89962825278809,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "donutChart",

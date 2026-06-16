@@ -23,14 +23,32 @@
                       "Entity": "Fact Torneos"
                     }
                   },
-                  "Property": "Calificacion Promedio"
+                  "Property": "Comision"
                 }
               },
-              "queryRef": "Fact Torneos.Calificacion Promedio",
-              "format": "0.00"
+              "queryRef": "Fact Torneos.Comision",
+              "nativeQueryRef": "Comision"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact Torneos"
+                  }
+                },
+                "Property": "Comision"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -189,7 +207,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Calificacion Prom'"
+                  "Value": "'Comisión Generada'"
                 }
               }
             },

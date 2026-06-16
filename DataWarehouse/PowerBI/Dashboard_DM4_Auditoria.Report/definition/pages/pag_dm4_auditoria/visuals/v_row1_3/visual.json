@@ -4,10 +4,10 @@
   "position": {
     "x": 843.254593175853,
     "y": 149.501312335958,
-    "z": 9,
+    "z": 9000,
     "height": 270.4461942257218,
     "width": 424.98687664041995,
-    "tabOrder": 9
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -157,6 +157,18 @@
                   "Value": "'''''''Segoe UI'''', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -188,6 +200,18 @@
                   "expr": {
                     "Literal": {
                       "Value": "'#1E2A3A'"
+                    }
+                  }
+                }
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
@@ -341,37 +365,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e6c956ebd9dc6e3b9fb8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DIM_Tabla_Auditada"
-              }
-            },
-            "Property": "Nombre Tabla"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "621436472ec99be977c7",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact Auditoria"
-              }
-            },
-            "Property": "Total Eventos"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

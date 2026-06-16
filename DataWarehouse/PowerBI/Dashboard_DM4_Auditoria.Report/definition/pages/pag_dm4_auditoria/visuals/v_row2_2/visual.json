@@ -4,10 +4,10 @@
   "position": {
     "x": 646.71916010498683,
     "y": 430.0262467191601,
-    "z": 11,
+    "z": 11000,
     "height": 277.16535433070862,
     "width": 621.52230971128608,
-    "tabOrder": 11
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -195,6 +195,25 @@
                   "Value": "'''''''Segoe UI'''', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Nombre Operación'"
+                }
+              }
             }
           }
         }
@@ -226,6 +245,18 @@
                   "expr": {
                     "Literal": {
                       "Value": "'#1E2A3A'"
+                    }
+                  }
+                }
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
@@ -345,7 +376,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Eventos vs Restringidos por Operacion'"
+                  "Value": "'Eventos vs Restringidos por Operación'"
                 }
               }
             },
@@ -383,7 +414,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "a2c790c1f0f47ff74892",
+        "name": "532288c371333805d1fe",
         "field": {
           "Column": {
             "Expression": {
@@ -397,7 +428,7 @@
         "type": "Categorical"
       },
       {
-        "name": "24165ab80a25ec91f3c3",
+        "name": "328aebda7d2bdf0967ea",
         "field": {
           "Measure": {
             "Expression": {
@@ -411,7 +442,7 @@
         "type": "Advanced"
       },
       {
-        "name": "3bcad55366b0fdacaf33",
+        "name": "66487ae137a9562ff8a8",
         "field": {
           "Measure": {
             "Expression": {

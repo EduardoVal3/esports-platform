@@ -85,6 +85,13 @@
                   "Value": "10D"
                 }
               }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Año'"
+                }
+              }
             }
           }
         }
@@ -295,7 +302,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Anio'"
+                  "Value": "'Año'"
                 }
               }
             },

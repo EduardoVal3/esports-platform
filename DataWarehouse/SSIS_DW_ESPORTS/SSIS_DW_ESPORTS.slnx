@@ -1,13 +1,24 @@
 <Solution>
   <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="DebugLocal" />
     <BuildType Name="Development" />
+    <BuildType Name="Release" />
     <Platform Name="Default" />
   </Configurations>
+  <Project Path="../Proyecto de informe1/SSRS_DW_ESPORTS.rptproj">
+    <BuildType Solution="Development|*" Project="Release" />
+    <Deploy Solution="Debug|*" />
+    <Deploy Solution="Development|*" />
+    <Deploy Solution="Release|*" />
+  </Project>
   <Project Path="../SSAS_DW_ESPORTS/SSAS_DW_ESPORTS.dwproj" Type="d2abab84-bf74-430a-b69e-9dc6d40dda17">
+    <BuildType Project="Development" />
     <Platform Project="?" />
     <Deploy />
   </Project>
   <Project Path="SSIS_DW_ESPORTS.dtproj" Type="c9674dcb-5085-4a16-b785-4c70dd1589bd">
+    <BuildType Project="Development" />
     <Platform Project="?" />
   </Project>
 </Solution>

@@ -11,8 +11,8 @@
   DTS:LocaleID="18442"
   DTS:ObjectName="ETL_01_Dimensiones"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{E34ADAA8-5996-4220-87F1-AE2FFFF50E3D}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{D00F8B88-F5D6-4865-8F47-15408EFA9CC4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "v_kpi_4",
   "position": {
-    "x": 950,
-    "y": 68,
+    "x": 949.67741935483866,
+    "y": 67.44086021505376,
     "z": 6000,
-    "height": 72,
-    "width": 298,
+    "height": 72.946236559139791,
+    "width": 319.31182795698925,
     "tabOrder": 6000
   },
   "visual": {
@@ -188,7 +188,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Sesion Total (seg)'"
+                  "Value": "'Sesión Total (seg)'"
                 }
               }
             },

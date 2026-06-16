@@ -4,10 +4,10 @@
   "position": {
     "x": 432,
     "y": 150,
-    "z": 8,
+    "z": 8000,
     "height": 270,
     "width": 400,
-    "tabOrder": 8
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -195,6 +195,18 @@
                   "Value": "'''''''Segoe UI'''', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -226,6 +238,30 @@
                   "expr": {
                     "Literal": {
                       "Value": "'#1E2A3A'"
+                    }
+                  }
+                }
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "secTitleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
@@ -345,7 +381,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Real vs Meta por Mes'"
+                  "Value": "'Monto Real vs Meta por Mes'"
                 }
               }
             },
@@ -379,51 +415,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "6de5afb54bd7fea50c30",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DIM_Tiempo"
-              }
-            },
-            "Property": "Mes Nombre"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d8c65167742f9c989447",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact Ingresos"
-              }
-            },
-            "Property": "Monto Real"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c275a64b129393de29fc",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact Ingresos"
-              }
-            },
-            "Property": "Meta Ingresos"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

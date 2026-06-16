@@ -11,8 +11,8 @@
   DTS:LocaleID="18442"
   DTS:ObjectName="ETL_00_Staging"
   DTS:PackageType="5"
-  DTS:VersionBuild="83"
-  DTS:VersionGUID="{E92BB15C-4B85-4607-9F90-E6F070209CE1}">
+  DTS:VersionBuild="85"
+  DTS:VersionGUID="{52AB1F4B-B825-4101-ACAC-C4E5D81A138D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -146,7 +146,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/GcEQ0zzcEyf8VpQzTV9MgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABz78/zHuME7Ed9VlAivRvQMcILREko/r8ileIleWBtBAAAAAAOgAAAAAIAACAAAABFJmOanHcMUnTef21hJzQqCs/rlJacSAzLtvtKDIb4YiAAAABzd98e+hFA5Or+rw7llLn6vU74OUSU/hNAUHpvtaBlg0AAAABUr3aLlFO9ymvFM225vbhrRxQtWHLZLZ9r2qqOhtIXOWYLXhojZcjbhFJq3ka3ybMEC+IaZeBi2aCUzjKQVvmL</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/GcEQ0zzcEyf8VpQzTV9MgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC2kB8TTRES0bn/zkxv5BbFHY+8Lhi6SPJk67U3dXP6gAAAAAAOgAAAAAIAACAAAADCGN6tdi5Qzdfq4APqYdJbBZDz9VnoRKAT+dE3tYIZqSAAAADjS+wCkBZcmUSDvk15PJynLbUpLxLtxli0qEuXQ9hafkAAAAA2zPLqJKjErb11xizNqP4FH6gatq7j2eqIHI6kcUhf3riEoF1DjFj1B+RDKUaI+fVqx7VSzXqAqgnTdvrH5kDa</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -175,7 +175,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/GcEQ0zzcEyf8VpQzTV9MgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABCnoMzbmwzrgxbinzLL4KhOqAt65Qz0QfpOniHgzqPRAAAAAAOgAAAAAIAACAAAADdyFkz22FTNctOISf3dX8hf63w34czjK+iCZ//OnlGKSAAAACzdMLEDRkdLoVXFK6w5Fcohr7aXLIzXi6kxg1Juv13TEAAAACUjigbRpYbNfUhbpxxLXN2H4WbOMISgwI6uIQPXPRuDn/dcKMFaExxuK19SCZqRSzkc8yZKKIjHOiDR1sIX434</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/GcEQ0zzcEyf8VpQzTV9MgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAf5c36ks9nlNSeFxXIcXjalqWWM47nDwpE7dulAYvo3gAAAAAOgAAAAAIAACAAAADgYYL8J2cgbrpt0bWcprFg2Sa2+8GBWlz283GqI/gZZCAAAAAG+HAvdaREn101cHV/GL0O+q5mktfs8aSbKm8V+tJKo0AAAACCPLuoQYwmKkZm5R7htfA4sV06eCtBv4EF5t7UdbZUciqQo0r5m/Na8xDNXaC5Php0mE73QTUcMb2Eab7E0G8H</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -11957,19 +11957,19 @@ FROM USUARIO_SEGUIDORES</property>
               startId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_TIENDA_SOLICITUD_SOPORTE.Outputs[Data Conversion Output]" />
             <path
               refId="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output15]"
+              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_TRANSACCION.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_TRANSACCION.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output14]"
               endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_MODO_JUEGO.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_MODO_JUEGO.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output14]"
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output13]"
               endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_CATALOGO_PLATAFORMA.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_CATALOGO_PLATAFORMA.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output13]"
-              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_TIENDA_ORDEN.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_TIENDA_ORDEN.Outputs[Data Conversion Output]" />
             <path
               refId="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output11]"
               endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_CATALOGO_ORIGEN_TRANSACCION.Inputs[OLE DB Destination Input]"
@@ -11987,14 +11987,14 @@ FROM USUARIO_SEGUIDORES</property>
               startId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_CATALOGO_ROL.Outputs[Data Conversion Output]" />
             <path
               refId="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output8]"
-              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_TRANSACCION.Inputs[OLE DB Destination Input]"
+              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_TIENDA_ITEM.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_TRANSACCION.Outputs[Data Conversion Output]" />
+              startId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_TIENDA_ITEM.Outputs[Data Conversion Output]" />
             <path
               refId="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output12]"
-              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_CATALOGO_REGION.Inputs[OLE DB Destination Input]"
+              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_TIENDA_ORDEN.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_CATALOGO_REGION.Outputs[Data Conversion Output]" />
+              startId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_TIENDA_ORDEN.Outputs[Data Conversion Output]" />
             <path
               refId="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output6]"
               endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_CATALOGO_ESTADO_INSCRIPCION.Inputs[OLE DB Destination Input]"
@@ -12012,129 +12012,129 @@ FROM USUARIO_SEGUIDORES</property>
               startId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_PERSONA.Outputs[Data Conversion Output]" />
             <path
               refId="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output3]"
-              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_TIENDA_ITEM.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_TIENDA_ITEM.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output2]"
               endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_JUEGO.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_JUEGO.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output1]"
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output2]"
               endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_CATALOGO_TIPO_ITEM.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_CATALOGO_TIPO_ITEM.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output7]"
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output1]"
               endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_AUDITORIA_LOG.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_AUDITORIA_LOG.Outputs[Data Conversion Output]" />
             <path
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output7]"
+              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_CATALOGO_REGION.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_CATALOGO_REGION.Outputs[Data Conversion Output]" />
+            <path
               refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output12]"
-              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_CATALOGO_PLATAFORMA.Inputs[Data Conversion Input]"
-              name="OLE DB Source Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_CATALOGO_PLATAFORMA.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output13]"
-              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_PERSONA.Inputs[Data Conversion Input]"
-              name="OLE DB Source Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_PERSONA.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output14]"
-              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_TIENDA_ORDEN.Inputs[Data Conversion Input]"
-              name="OLE DB Source Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_TIENDA_ORDEN.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output15]"
-              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_USUARIO.Inputs[Data Conversion Input]"
-              name="OLE DB Source Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_USUARIO.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output18]"
-              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_CATALOGO_TIPO_ITEM.Inputs[Data Conversion Input]"
-              name="OLE DB Source Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_CATALOGO_TIPO_ITEM.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output17]"
-              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_USUARIO_ESTADISTICAS_JUEGO.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_USUARIO_ESTADISTICAS_JUEGO.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output19]"
-              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_TIENDA_SOLICITUD_SOPORTE.Inputs[Data Conversion Input]"
-              name="OLE DB Source Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_TIENDA_SOLICITUD_SOPORTE.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output11]"
               endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_CATALOGO_ROL.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
               startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_CATALOGO_ROL.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output16]"
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output13]"
+              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_TIENDA_SOLICITUD_SOPORTE.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_TIENDA_SOLICITUD_SOPORTE.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output14]"
+              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_USUARIO_ESTADISTICAS_JUEGO.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_USUARIO_ESTADISTICAS_JUEGO.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output15]"
+              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_CATALOGO_TIPO_ITEM.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_CATALOGO_TIPO_ITEM.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output18]"
+              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_PERSONA.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_PERSONA.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output17]"
+              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_AUDITORIA_LOG.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_AUDITORIA_LOG.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output19]"
+              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_CATALOGO_PLATAFORMA.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_CATALOGO_PLATAFORMA.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output11]"
               endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_CATALOGO_ORIGEN_TRANSACCION.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
               startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_CATALOGO_ORIGEN_TRANSACCION.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output10]"
-              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_CATALOGO_TIPO_TORNEO.Inputs[Data Conversion Input]"
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output16]"
+              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_USUARIO.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_CATALOGO_TIPO_TORNEO.Outputs[OLE DB Source Output]" />
+              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_USUARIO.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output10]"
+              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_TIENDA_ORDEN.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_TIENDA_ORDEN.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output2]"
-              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_JUEGO.Inputs[Data Conversion Input]"
-              name="OLE DB Source Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_JUEGO.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output8]"
-              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_TORNEO.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_TORNEO.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output7]"
-              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_TORNEO_INSCRIPCION.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_TORNEO_INSCRIPCION.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output6]"
-              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_USUARIO_SEGUIDORES.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_USUARIO_SEGUIDORES.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output5]"
               endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_TIENDA_ITEM.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
               startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_TIENDA_ITEM.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output4]"
-              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_MODO_JUEGO.Inputs[Data Conversion Input]"
-              name="OLE DB Source Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_MODO_JUEGO.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output3]"
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output8]"
               endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_TORNEO_PREMIOS.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_TORNEO_PREMIOS.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output20]"
-              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_CATALOGO_ESTADO_INSCRIPCION.Inputs[Data Conversion Input]"
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output7]"
+              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_TORNEO.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_CATALOGO_ESTADO_INSCRIPCION.Outputs[OLE DB Source Output]" />
+              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_TORNEO.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output1]"
-              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_USUARIO_AMIGOS.Inputs[OLE DB Destination Input]"
-              name="OLE DB Source Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_USUARIO_AMIGOS.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output]"
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output6]"
               endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_TRANSACCION.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
               startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_TRANSACCION.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output9]"
-              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_AUDITORIA_LOG.Inputs[Data Conversion Input]"
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output5]"
+              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_CATALOGO_ESTADO_INSCRIPCION.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
-              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_AUDITORIA_LOG.Outputs[OLE DB Source Output]" />
+              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_CATALOGO_ESTADO_INSCRIPCION.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output4]"
+              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_USUARIO_AMIGOS.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_USUARIO_AMIGOS.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output3]"
+              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_MODO_JUEGO.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_MODO_JUEGO.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output20]"
+              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_CATALOGO_TIPO_TORNEO.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_CATALOGO_TIPO_TORNEO.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output1]"
+              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_USUARIO_SEGUIDORES.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_USUARIO_SEGUIDORES.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output]"
+              endId="Package\DFT_Cargar_Staging_Oracle\DST_STG_ORACLE_TORNEO_INSCRIPCION.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_TORNEO_INSCRIPCION.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output9]"
+              endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_JUEGO.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_JUEGO.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output21]"
               endId="Package\DFT_Cargar_Staging_Oracle\CNV_ORA_CATALOGO_REGION.Inputs[Data Conversion Input]"
@@ -12671,7 +12671,7 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
         <NodeLayout
           Size="212,42"
           Id="Package\DFT_Cargar_Staging_Oracle"
-          TopLeft="21,150" />
+          TopLeft="22,151" />
         <NodeLayout
           Size="210,42"
           Id="Package\DFT_Cargar_Staging_RRHH"
@@ -12690,26 +12690,26 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-17.5,55"
+              EndConnector="-50.5,56"
               Start="0,0"
-              End="-17.5,47.5">
+              End="-50.5,48.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.5" />
+                    End="0,29.3483146067416" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.5"
-                    Point2="0,27.5"
-                    Point3="-4,27.5" />
+                    Point1="0,29.3483146067416"
+                    Point2="0,33.3483146067416"
+                    Point3="-4,33.3483146067416" />
                   <mssgle:LineSegment
-                    End="-13.5,27.5" />
+                    End="-46.5,33.3483146067416" />
                   <mssgle:CubicBezierSegment
-                    Point1="-13.5,27.5"
-                    Point2="-17.5,27.5"
-                    Point3="-17.5,31.5" />
+                    Point1="-46.5,33.3483146067416"
+                    Point2="-50.5,33.3483146067416"
+                    Point3="-50.5,37.3483146067416" />
                   <mssgle:LineSegment
-                    End="-17.5,47.5" />
+                    End="-50.5,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12720,30 +12720,30 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
-          TopLeft="161,150">
+          TopLeft="162,151">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="187.333333333333,-56"
+              EndConnector="186.333333333333,-57"
               Start="0,0"
-              End="187.333333333333,-48.5">
+              End="186.333333333333,-49.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-23.9975310819152" />
+                    End="0,-24.4974869940922" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-23.9975310819152"
-                    Point2="0,-27.9975310819152"
-                    Point3="4,-27.9975310819152" />
+                    Point1="0,-24.4974869940922"
+                    Point2="0,-28.4974869940922"
+                    Point3="4,-28.4974869940922" />
                   <mssgle:LineSegment
-                    End="183.333333333333,-27.9975310819152" />
+                    End="182.333333333333,-28.4974869940922" />
                   <mssgle:CubicBezierSegment
-                    Point1="183.333333333333,-27.9975310819152"
-                    Point2="187.333333333333,-27.9975310819152"
-                    Point3="187.333333333333,-31.9975310819152" />
+                    Point1="182.333333333333,-28.4974869940922"
+                    Point2="186.333333333333,-28.4974869940922"
+                    Point3="186.333333333333,-32.4974869940922" />
                   <mssgle:LineSegment
-                    End="187.333333333333,-48.5" />
+                    End="186.333333333333,-49.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13411,7 +13411,7 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
         <NodeLayout
           Size="227,42"
           Id="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_CATALOGO_REGION"
-          TopLeft="130.75,75" />
+          TopLeft="101.75,79" />
         <NodeLayout
           Size="211,42"
           Id="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_AUDITORIA_LOG"
@@ -13503,7 +13503,7 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
         <NodeLayout
           Size="303,42"
           Id="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_CATALOGO_ORIGEN_TRANSACCION"
-          TopLeft="130,261.5" />
+          TopLeft="54,260.5" />
         <NodeLayout
           Size="299,42"
           Id="Package\DFT_Cargar_Staging_Oracle\SRC_ORA_CATALOGO_ESTADO_INSCRIPCION"
@@ -13542,30 +13542,30 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
           TopLeft="314.75,1169.5" />
         <EdgeLayout
           Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output21]"
-          TopLeft="244.25,75">
+          TopLeft="215.25,79">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="78.8333333333333,-24"
+              EndConnector="144.5,-28"
               Start="0,0"
-              End="78.8333333333333,-16.5">
+              End="144.5,-20.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-10.2996515679443" />
+                    End="0,-10" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-10.2996515679443"
-                    Point2="0,-14.2996515679443"
-                    Point3="4,-14.2996515679443" />
+                    Point1="0,-10"
+                    Point2="0,-14"
+                    Point3="4,-14" />
                   <mssgle:LineSegment
-                    End="74.8333333333333,-14.2996515679443" />
+                    End="140.5,-14" />
                   <mssgle:CubicBezierSegment
-                    Point1="74.8333333333333,-14.2996515679443"
-                    Point2="78.8333333333333,-14.2996515679443"
-                    Point3="78.8333333333333,-18.2996515679443" />
+                    Point1="140.5,-14"
+                    Point2="144.5,-14"
+                    Point3="144.5,-18" />
                   <mssgle:LineSegment
-                    End="78.8333333333333,-16.5" />
+                    End="144.5,-20.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13578,354 +13578,6 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output20]"
-          TopLeft="225.75,669">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="186.25,-33.25"
-              Start="0,0"
-              End="186.25,-25.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-12.625" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-12.625"
-                    Point2="0,-16.625"
-                    Point3="4,-16.625" />
-                  <mssgle:LineSegment
-                    End="182.25,-16.625" />
-                  <mssgle:CubicBezierSegment
-                    Point1="182.25,-16.625"
-                    Point2="186.25,-16.625"
-                    Point3="186.25,-20.625" />
-                  <mssgle:LineSegment
-                    End="186.25,-25.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output19]"
-          TopLeft="765.25,1390.75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="205.5,-38.75"
-              Start="0,0"
-              End="205.5,-31.25">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-15.375" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-15.375"
-                    Point2="0,-19.375"
-                    Point3="4,-19.375" />
-                  <mssgle:LineSegment
-                    End="201.5,-19.375" />
-                  <mssgle:CubicBezierSegment
-                    Point1="201.5,-19.375"
-                    Point2="205.5,-19.375"
-                    Point3="205.5,-23.375" />
-                  <mssgle:LineSegment
-                    End="205.5,-31.25" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output18]"
-          TopLeft="780.75,102">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="145,-42"
-              Start="0,0"
-              End="145,-34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-17" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-17"
-                    Point2="0,-21"
-                    Point3="4,-21" />
-                  <mssgle:LineSegment
-                    End="141,-21" />
-                  <mssgle:CubicBezierSegment
-                    Point1="141,-21"
-                    Point2="145,-21"
-                    Point3="145,-25" />
-                  <mssgle:LineSegment
-                    End="145,-34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output17]"
-          TopLeft="311.5,1542.375">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="43.2499999999999,0"
-              Start="0,0"
-              End="35.7499999999999,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="35.7499999999999,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output16]"
-          TopLeft="281.5,261.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="52.5,-43.25"
-              Start="0,0"
-              End="52.5,-35.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-17.625" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-17.625"
-                    Point2="0,-21.625"
-                    Point3="4,-21.625" />
-                  <mssgle:LineSegment
-                    End="48.5,-21.625" />
-                  <mssgle:CubicBezierSegment
-                    Point1="48.5,-21.625"
-                    Point2="52.5,-21.625"
-                    Point3="52.5,-25.625" />
-                  <mssgle:LineSegment
-                    End="52.5,-35.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output15]"
-          TopLeft="891.25,643">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="152.5,-37"
-              Start="0,0"
-              End="152.5,-29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-14.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-14.5"
-                    Point2="0,-18.5"
-                    Point3="4,-18.5" />
-                  <mssgle:LineSegment
-                    End="148.5,-18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="148.5,-18.5"
-                    Point2="152.5,-18.5"
-                    Point3="152.5,-22.5" />
-                  <mssgle:LineSegment
-                    End="152.5,-29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output14]"
-          TopLeft="799.75,944.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="100,-33.25"
-              Start="0,0"
-              End="100,-25.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-12.625" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-12.625"
-                    Point2="0,-16.625"
-                    Point3="4,-16.625" />
-                  <mssgle:LineSegment
-                    End="96.0000000000001,-16.625" />
-                  <mssgle:CubicBezierSegment
-                    Point1="96.0000000000001,-16.625"
-                    Point2="100,-16.625"
-                    Point3="100,-20.625" />
-                  <mssgle:LineSegment
-                    End="100,-25.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output13]"
-          TopLeft="889.25,806.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="152.5,-37"
-              Start="0,0"
-              End="152.5,-29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-14.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-14.5"
-                    Point2="0,-18.5"
-                    Point3="4,-18.5" />
-                  <mssgle:LineSegment
-                    End="148.5,-18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="148.5,-18.5"
-                    Point2="152.5,-18.5"
-                    Point3="152.5,-22.5" />
-                  <mssgle:LineSegment
-                    End="152.5,-29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output12]"
-          TopLeft="237,491.75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="144.5,-42"
-              Start="0,0"
-              End="144.5,-34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-17" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-17"
-                    Point2="0,-21"
-                    Point3="4,-21" />
-                  <mssgle:LineSegment
-                    End="140.5,-21" />
-                  <mssgle:CubicBezierSegment
-                    Point1="140.5,-21"
-                    Point2="144.5,-21"
-                    Point3="144.5,-25" />
-                  <mssgle:LineSegment
-                    End="144.5,-34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output11]"
-          TopLeft="837.75,461.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="152.5,-37"
-              Start="0,0"
-              End="152.5,-29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-14.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-14.5"
-                    Point2="0,-18.5"
-                    Point3="4,-18.5" />
-                  <mssgle:LineSegment
-                    End="148.5,-18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="148.5,-18.5"
-                    Point2="152.5,-18.5"
-                    Point3="152.5,-22.5" />
-                  <mssgle:LineSegment
-                    End="152.5,-29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output10]"
           TopLeft="824.5,284.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13961,7 +13613,79 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output9]"
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output19]"
+          TopLeft="237,491.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="144.5,-42"
+              Start="0,0"
+              End="144.5,-34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-17"
+                    Point2="0,-21"
+                    Point3="4,-21" />
+                  <mssgle:LineSegment
+                    End="140.5,-21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="140.5,-21"
+                    Point2="144.5,-21"
+                    Point3="144.5,-25" />
+                  <mssgle:LineSegment
+                    End="144.5,-34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output18]"
+          TopLeft="889.25,806.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="152.5,-37"
+              Start="0,0"
+              End="152.5,-29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-14.5"
+                    Point2="0,-18.5"
+                    Point3="4,-18.5" />
+                  <mssgle:LineSegment
+                    End="148.5,-18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="148.5,-18.5"
+                    Point2="152.5,-18.5"
+                    Point3="152.5,-22.5" />
+                  <mssgle:LineSegment
+                    End="152.5,-29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output17]"
           TopLeft="765.5,1225.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13997,103 +13721,31 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output8]"
-          TopLeft="241,1190.875">
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output16]"
+          TopLeft="891.25,643">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="73.75,0"
+              EndConnector="152.5,-37"
               Start="0,0"
-              End="66.25,0">
+              End="152.5,-29.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="66.25,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output7]"
-          TopLeft="269.5,1255.75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="52.75,0"
-              Start="0,0"
-              End="45.25,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="45.25,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output6]"
-          TopLeft="267.75,1465.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="59.5,0"
-              Start="0,0"
-              End="52,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="52,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output5]"
-          TopLeft="204.75,953.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="152.5,-28.25"
-              Start="0,0"
-              End="152.5,-20.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-10.125" />
+                    End="0,-14.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-10.125"
-                    Point2="0,-14.125"
-                    Point3="4,-14.125" />
+                    Point1="0,-14.5"
+                    Point2="0,-18.5"
+                    Point3="4,-18.5" />
                   <mssgle:LineSegment
-                    End="148.5,-14.125" />
+                    End="148.5,-18.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="148.5,-14.125"
-                    Point2="152.5,-14.125"
-                    Point3="152.5,-18.125" />
+                    Point1="148.5,-18.5"
+                    Point2="152.5,-18.5"
+                    Point3="152.5,-22.5" />
                   <mssgle:LineSegment
-                    End="152.5,-20.75" />
+                    End="152.5,-29.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14105,31 +13757,31 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output4]"
-          TopLeft="772,1079">
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output15]"
+          TopLeft="780.75,102">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="153.75,-30.75"
+              EndConnector="145,-42"
               Start="0,0"
-              End="153.75,-23.25">
+              End="145,-34.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-11.375" />
+                    End="0,-17" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-11.375"
-                    Point2="0,-15.375"
-                    Point3="4,-15.375" />
+                    Point1="0,-17"
+                    Point2="0,-21"
+                    Point3="4,-21" />
                   <mssgle:LineSegment
-                    End="149.75,-15.375" />
+                    End="141,-21" />
                   <mssgle:CubicBezierSegment
-                    Point1="149.75,-15.375"
-                    Point2="153.75,-15.375"
-                    Point3="153.75,-19.375" />
+                    Point1="141,-21"
+                    Point2="145,-21"
+                    Point3="145,-25" />
                   <mssgle:LineSegment
-                    End="153.75,-23.25" />
+                    End="145,-34.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14141,19 +13793,19 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output3]"
-          TopLeft="248.5,1326">
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output14]"
+          TopLeft="311.5,1542.375">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="73.75,0"
+              EndConnector="43.2499999999999,0"
               Start="0,0"
-              End="66.25,0">
+              End="35.7499999999999,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="66.25,0" />
+                    End="35.7499999999999,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14165,7 +13817,151 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output2]"
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output13]"
+          TopLeft="765.25,1390.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="205.5,-38.75"
+              Start="0,0"
+              End="205.5,-31.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-15.375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-15.375"
+                    Point2="0,-19.375"
+                    Point3="4,-19.375" />
+                  <mssgle:LineSegment
+                    End="201.5,-19.375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="201.5,-19.375"
+                    Point2="205.5,-19.375"
+                    Point3="205.5,-23.375" />
+                  <mssgle:LineSegment
+                    End="205.5,-31.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output12]"
+          TopLeft="837.75,461.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="152.5,-37"
+              Start="0,0"
+              End="152.5,-29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-14.5"
+                    Point2="0,-18.5"
+                    Point3="4,-18.5" />
+                  <mssgle:LineSegment
+                    End="148.5,-18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="148.5,-18.5"
+                    Point2="152.5,-18.5"
+                    Point3="152.5,-22.5" />
+                  <mssgle:LineSegment
+                    End="152.5,-29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output11]"
+          TopLeft="205.5,260.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="79.1666666666666,-42.25"
+              Start="0,0"
+              End="79.1666666666666,-34.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-21.217277486911" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-21.217277486911"
+                    Point2="0,-25.217277486911"
+                    Point3="4,-25.217277486911" />
+                  <mssgle:LineSegment
+                    End="75.1666666666666,-25.217277486911" />
+                  <mssgle:CubicBezierSegment
+                    Point1="75.1666666666666,-25.217277486911"
+                    Point2="79.1666666666666,-25.217277486911"
+                    Point3="79.1666666666666,-29.217277486911" />
+                  <mssgle:LineSegment
+                    End="79.1666666666666,-34.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output10]"
+          TopLeft="799.75,944.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="100,-33.25"
+              Start="0,0"
+              End="100,-25.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-12.625" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-12.625"
+                    Point2="0,-16.625"
+                    Point3="4,-16.625" />
+                  <mssgle:LineSegment
+                    End="96.0000000000001,-16.625" />
+                  <mssgle:CubicBezierSegment
+                    Point1="96.0000000000001,-16.625"
+                    Point2="100,-16.625"
+                    Point3="100,-20.625" />
+                  <mssgle:LineSegment
+                    End="100,-25.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output9]"
           TopLeft="161,1088">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14201,19 +13997,19 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output1]"
-          TopLeft="243.75,1395">
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output8]"
+          TopLeft="248.5,1326">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="83.5,0"
+              EndConnector="73.75,0"
               Start="0,0"
-              End="76,0">
+              End="66.25,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="76,0" />
+                    End="66.25,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14225,7 +14021,31 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output]"
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output7]"
+          TopLeft="241,1190.875">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="73.75,0"
+              Start="0,0"
+              End="66.25,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="66.25,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output6]"
           TopLeft="255,814.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14261,7 +14081,223 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output5]"
+          TopLeft="225.75,669">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="186.25,-33.25"
+              Start="0,0"
+              End="186.25,-25.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-12.625" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-12.625"
+                    Point2="0,-16.625"
+                    Point3="4,-16.625" />
+                  <mssgle:LineSegment
+                    End="182.25,-16.625" />
+                  <mssgle:CubicBezierSegment
+                    Point1="182.25,-16.625"
+                    Point2="186.25,-16.625"
+                    Point3="186.25,-20.625" />
+                  <mssgle:LineSegment
+                    End="186.25,-25.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output4]"
+          TopLeft="243.75,1395">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="83.5,0"
+              Start="0,0"
+              End="76,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="76,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output3]"
+          TopLeft="772,1079">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="153.75,-30.75"
+              Start="0,0"
+              End="153.75,-23.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-11.375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-11.375"
+                    Point2="0,-15.375"
+                    Point3="4,-15.375" />
+                  <mssgle:LineSegment
+                    End="149.75,-15.375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="149.75,-15.375"
+                    Point2="153.75,-15.375"
+                    Point3="153.75,-19.375" />
+                  <mssgle:LineSegment
+                    End="153.75,-23.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output2]"
+          TopLeft="204.75,953.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="152.5,-28.25"
+              Start="0,0"
+              End="152.5,-20.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-10.125" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-10.125"
+                    Point2="0,-14.125"
+                    Point3="4,-14.125" />
+                  <mssgle:LineSegment
+                    End="148.5,-14.125" />
+                  <mssgle:CubicBezierSegment
+                    Point1="148.5,-14.125"
+                    Point2="152.5,-14.125"
+                    Point3="152.5,-18.125" />
+                  <mssgle:LineSegment
+                    End="152.5,-20.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output1]"
+          TopLeft="267.75,1465.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59.5,0"
+              Start="0,0"
+              End="52,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="52,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[OLE DB Source Output]"
+          TopLeft="269.5,1255.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52.75,0"
+              Start="0,0"
+              End="45.25,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="45.25,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output15]"
+          TopLeft="439.666666666667,786">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49.5833333333334,28.75"
+              Start="0,0"
+              End="49.5833333333334,21.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.63622902270484" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.63622902270484"
+                    Point2="0,11.6362290227048"
+                    Point3="4,11.6362290227048" />
+                  <mssgle:LineSegment
+                    End="45.5833333333334,11.6362290227048" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.5833333333334,11.6362290227048"
+                    Point2="49.5833333333334,11.6362290227048"
+                    Point3="49.5833333333334,15.6362290227048" />
+                  <mssgle:LineSegment
+                    End="49.5833333333334,21.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output14]"
           TopLeft="957.75,1048.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14297,7 +14333,7 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output14]"
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output13]"
           TopLeft="422.5,449.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14333,7 +14369,7 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output13]"
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output12]"
           TopLeft="933.083333333333,911">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14358,36 +14394,6 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
                     Point3="122.166666666667,16.6431297709924" />
                   <mssgle:LineSegment
                     End="122.166666666667,23.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output12]"
-          TopLeft="473.75,30">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="25.5,43"
-              Start="0,0"
-              End="25.5,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="21.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="21.5,0"
-                    Point2="25.5,0"
-                    Point3="25.5,4" />
-                  <mssgle:LineSegment
-                    End="25.5,35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14508,30 +14514,30 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output8]"
-          TopLeft="439.666666666667,786">
+          TopLeft="388.916666666667,925">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="49.5833333333334,28.75"
+              EndConnector="70.0833333333334,25"
               Start="0,0"
-              End="49.5833333333334,21.25">
+              End="70.0833333333334,17.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,7.63622902270484" />
+                    End="0,6.12024048096193" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,7.63622902270484"
-                    Point2="0,11.6362290227048"
-                    Point3="4,11.6362290227048" />
+                    Point1="0,6.12024048096193"
+                    Point2="0,10.1202404809619"
+                    Point3="4,10.1202404809619" />
                   <mssgle:LineSegment
-                    End="45.5833333333334,11.6362290227048" />
+                    End="66.0833333333334,10.1202404809619" />
                   <mssgle:CubicBezierSegment
-                    Point1="45.5833333333334,11.6362290227048"
-                    Point2="49.5833333333334,11.6362290227048"
-                    Point3="49.5833333333334,15.6362290227048" />
+                    Point1="66.0833333333334,10.1202404809619"
+                    Point2="70.0833333333334,10.1202404809619"
+                    Point3="70.0833333333334,14.1202404809619" />
                   <mssgle:LineSegment
-                    End="49.5833333333334,21.25" />
+                    End="70.0833333333334,17.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14544,30 +14550,24 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output7]"
-          TopLeft="955,1190.75">
+          TopLeft="473.75,30">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="79.75,40.5"
+              EndConnector="25.5,43"
               Start="0,0"
-              End="79.75,33">
+              End="25.5,35.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.3820224719101" />
+                    End="21.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.3820224719101"
-                    Point2="0,16.3820224719101"
-                    Point3="4,16.3820224719101" />
+                    Point1="21.5,0"
+                    Point2="25.5,0"
+                    Point3="25.5,4" />
                   <mssgle:LineSegment
-                    End="75.75,16.3820224719101" />
-                  <mssgle:CubicBezierSegment
-                    Point1="75.75,16.3820224719101"
-                    Point2="79.75,16.3820224719101"
-                    Point3="79.75,20.3820224719101" />
-                  <mssgle:LineSegment
-                    End="79.75,33" />
+                    End="25.5,35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14688,42 +14688,6 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output3]"
-          TopLeft="388.916666666667,925">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="70.0833333333334,25"
-              Start="0,0"
-              End="70.0833333333334,17.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,6.12024048096193" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,6.12024048096193"
-                    Point2="0,10.1202404809619"
-                    Point3="4,10.1202404809619" />
-                  <mssgle:LineSegment
-                    End="66.0833333333334,10.1202404809619" />
-                  <mssgle:CubicBezierSegment
-                    Point1="66.0833333333334,10.1202404809619"
-                    Point2="70.0833333333334,10.1202404809619"
-                    Point3="70.0833333333334,14.1202404809619" />
-                  <mssgle:LineSegment
-                    End="70.0833333333334,17.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output2]"
           TopLeft="340.583333333333,1057.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14759,7 +14723,7 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output1]"
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output2]"
           TopLeft="965.083333333333,60">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14784,6 +14748,42 @@ INNER JOIN Departamento d ON d.idDepartamento = e.idDepartamento;</property>
                     Point3="110.666666666667,18.1368078175896" />
                   <mssgle:LineSegment
                     End="110.666666666667,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Cargar_Staging_Oracle.Paths[Data Conversion Output1]"
+          TopLeft="955,1190.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="79.75,40.5"
+              Start="0,0"
+              End="79.75,33">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.3820224719101" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.3820224719101"
+                    Point2="0,16.3820224719101"
+                    Point3="4,16.3820224719101" />
+                  <mssgle:LineSegment
+                    End="75.75,16.3820224719101" />
+                  <mssgle:CubicBezierSegment
+                    Point1="75.75,16.3820224719101"
+                    Point2="79.75,16.3820224719101"
+                    Point3="79.75,20.3820224719101" />
+                  <mssgle:LineSegment
+                    End="79.75,33" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

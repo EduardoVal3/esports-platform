@@ -4,10 +4,10 @@
   "position": {
     "x": 20,
     "y": 430,
-    "z": 10,
+    "z": 10000,
     "height": 278,
     "width": 614,
-    "tabOrder": 10
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -157,6 +157,18 @@
                   "Value": "'''''''Segoe UI'''', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -188,6 +200,18 @@
                   "expr": {
                     "Literal": {
                       "Value": "'#1E2A3A'"
+                    }
+                  }
+                }
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
@@ -341,37 +365,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "27bf8c194761f9ca302f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DIM_Rol_Usuario"
-              }
-            },
-            "Property": "Nombre Rol"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "5ab0bad5c9fa8c351de7",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact Auditoria"
-              }
-            },
-            "Property": "Tickets Soporte"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -5,13 +5,13 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 81
+        "y": 94.5945945945946
       },
       "nodes": [
         {
           "location": {
-            "x": 337.09142527270939,
-            "y": 275.12004451840994
+            "x": 351.09142527270939,
+            "y": 322.12004451840994
           },
           "nodeIndex": "Fact Ingresos",
           "size": {
@@ -34,7 +34,7 @@
         },
         {
           "location": {
-            "x": 49.999999999999986,
+            "x": 17.999999999999986,
             "y": 377.51477808560293
           },
           "nodeIndex": "DIM_Region_Ingresos",
@@ -46,8 +46,8 @@
         },
         {
           "location": {
-            "x": 60.286101156993936,
-            "y": -49.929886939522135
+            "x": 96.286101156993936,
+            "y": 0
           },
           "nodeIndex": "DIM_Responsable_RRHH",
           "size": {
@@ -70,8 +70,8 @@
         },
         {
           "location": {
-            "x": 570.57932122189868,
-            "y": 527.425104134579
+            "x": 608.57932122189868,
+            "y": 565.425104134579
           },
           "nodeIndex": "DIM_Tipo_Item",
           "size": {
@@ -82,8 +82,8 @@
         },
         {
           "location": {
-            "x": 428.17563727306168,
-            "y": -50
+            "x": 475.17563727306168,
+            "y": 0
           },
           "nodeIndex": "DIM_Usuario_Comprador",
           "size": {
@@ -94,8 +94,8 @@
         },
         {
           "location": {
-            "x": 1030.5383660308576,
-            "y": 365.39680198554777
+            "x": 907.56539305788453,
+            "y": 518.09950468825059
           },
           "nodeIndex": "Measures",
           "size": {
@@ -106,7 +106,7 @@
         }
       ],
       "name": "Todas las tablas",
-      "zoomValue": 100,
+      "zoomValue": 74,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

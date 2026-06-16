@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "v_row2_2",
   "position": {
-    "x": 646,
-    "y": 430,
-    "z": 11,
-    "height": 278,
-    "width": 614,
-    "tabOrder": 11
+    "x": 646.39405204460968,
+    "y": 429.59107806691452,
+    "z": 11000,
+    "height": 278.36431226765797,
+    "width": 620.96654275092931,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "lineChart",
@@ -146,6 +146,18 @@
                   "Value": "false"
                 }
               }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -175,8 +187,21 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#1E2A3A'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
@@ -350,37 +375,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f0f4bb46006c956b0a70",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DIM_Tiempo"
-              }
-            },
-            "Property": "Mes Nombre"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "f85382da590e7763b6aa",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact Ingresos"
-              }
-            },
-            "Property": "Monto Real"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

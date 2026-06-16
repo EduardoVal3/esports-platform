@@ -34,6 +34,13 @@
                 "Value": "true"
               }
             }
+          },
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
           }
         }
       }

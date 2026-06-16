@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="DS_DW_ESPORTS">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=localhost;Initial Catalog=DW_ESPORTS</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>dd190e2b-12d2-4cc0-aa7c-3841e240fc16</DataSourceID>
+</RptDataSource>

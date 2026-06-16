@@ -4,10 +4,10 @@
   "position": {
     "x": 920,
     "y": 8,
-    "z": 1,
+    "z": 1000,
     "height": 52,
     "width": 170,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "slicer",
@@ -83,6 +83,13 @@
               "expr": {
                 "Literal": {
                   "Value": "10D"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Año'"
                 }
               }
             }
@@ -254,7 +261,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Anio'"
+                  "Value": "'Año'"
                 }
               }
             },
@@ -288,23 +295,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "0f46fe7903980907c12e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DIM_Tiempo"
-              }
-            },
-            "Property": "Anio"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
